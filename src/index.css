@@ -579,9 +579,17 @@ body {
 }
 
 .section-head h2 {
-  margin: 0.12rem 0 0;
+  margin: 0.4rem 0 0;
   font-family: 'Sora', sans-serif;
   font-size: clamp(1.25rem, 2.7vw, 1.8rem);
+}
+
+.section-head {
+  margin-bottom: 1.3rem;
+}
+
+.section-panel {
+  padding: 1.9rem;
 }
 
 .section-icon {
@@ -624,33 +632,24 @@ body {
 .skill-card,
 .project-card,
 .cert-card {
-  padding: 1.22rem;
+  padding: 1.32rem;
   position: relative;
   overflow: hidden;
-}
-
-.cert-thumb-wrap {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  overflow: hidden;
-  aspect-ratio: 16 / 8.8;
-  margin-bottom: 0.6rem;
-  background: rgba(16, 22, 42, 0.65);
-}
-
-.cert-thumb-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .skill-card h3,
 .project-card h3,
 .cert-card h3 {
-  margin: 0;
+  margin: 0 0 0.85rem;
   font-family: 'Sora', sans-serif;
-  font-size: 1.02rem;
+  font-size: 1.04rem;
+}
+
+.skill-card .chip-wrap,
+.project-card .chip-wrap,
+.cert-card .chip-wrap {
+  margin-top: 0.9rem;
+  gap: 0.55rem;
 }
 
 .project-card p,
@@ -701,6 +700,81 @@ body {
   font-size: 0.72rem;
   color: var(--muted);
   background: rgba(26, 35, 64, 0.45);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: rgba(74, 112, 202, 0.65);
+  color: #f4f8ff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.cert-thumb-wrap {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 8.8;
+  margin-bottom: 0.6rem;
+  background: rgba(16, 22, 42, 0.65);
+}
+
+.cert-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card li,
+.timeline-item li,
+.plain-list li {
+  margin-bottom: 0.35rem;
+}
+
+.project-card .chip-wrap {
+  margin-top: 0.3rem;
+}
+
+.link-row {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.27rem 0.6rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: rgba(26, 35, 64, 0.45);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: rgba(74, 112, 202, 0.65);
+  color: #f4f8ff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
 }
 
 .timeline {
@@ -1094,6 +1168,12 @@ body {
 [data-theme='light'] .contact-card input,
 [data-theme='light'] .contact-card textarea {
   background: rgba(223, 232, 255, 0.52);
+}
+
+[data-theme='light'] .chip:hover {
+  background: rgba(74, 112, 202, 0.8);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 [data-theme='light'] .hero-card,
