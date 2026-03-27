@@ -56,7 +56,7 @@ const Hero = ({ onScrollTo }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.5 }}
         >
-          <a href="/NishthaCollegeCVJava.pdf" className="btn btn-primary" download="Nishtha-CV.pdf">
+          <a href="/NewNishthaCollegeCV1.pdf" className="btn btn-primary" download="Nishtha-CV.pdf">
             <FaDownload size={14} />
             Download Resume
           </a>

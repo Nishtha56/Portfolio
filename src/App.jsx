@@ -221,7 +221,7 @@ const education = [
 const roles = ['Full Stack Developer', 'Data Analyst', 'ML Enthusiast', 'Problem Solver'];
 
 function App() {
-  const resumeUrl = `${import.meta.env.BASE_URL}NishthaCollegeCVNew.pdf?v=20260319-1`;
+  const resumeUrl = `${import.meta.env.BASE_URL}NewNishthaCollegeCV1.pdf?v=20260327-1`;
   const [theme, setTheme] = useState('dark');
   const [active, setActive] = useState('home');
   const [roleIndex, setRoleIndex] = useState(0);
